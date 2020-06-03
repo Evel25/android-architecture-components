@@ -51,6 +51,7 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ImageButton
+        android:id="@+id/btnAddCust"
         android:layout_width="50dp"
         android:layout_height="50dp"
         app:layout_constraintRight_toRightOf="parent"

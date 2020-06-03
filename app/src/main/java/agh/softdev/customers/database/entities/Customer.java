@@ -9,12 +9,12 @@ import org.jetbrains.annotations.PropertyKey;
 public class Customer {
     @PrimaryKey(autoGenerate = true)
     private int id;
-    private String Name;
-    private Double Salary;
+    private String name;
+    private Double salary;
 
     public Customer(String name, Double salary) {
-        Name = name;
-        Salary = salary;
+        this.name = name;
+        this.salary = salary;
     }
 
     public int getId() {
@@ -22,11 +22,11 @@ public class Customer {
     }
 
     public String getName() {
-        return Name;
+        return name;
     }
 
     public Double getSalary() {
-        return Salary;
+        return salary;
     }
 
     public void setId(int id) {
