@@ -23,6 +23,10 @@ class CustomerAdapter(private val Customers:List<agh.softdev.customers.database.
         return CustomerViewHolder(itemView);
     }
 
+    public fun getItemAt(position: Int):agh.softdev.customers.database.entities.Customer{
+        return Customers[position];
+    }
+
     override fun onBindViewHolder(holder: CustomerViewHolder, position: Int) {
         val currentCustomer:agh.softdev.customers.database.entities.Customer = Customers.get(position);
 
