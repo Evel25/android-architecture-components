@@ -10,7 +10,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.customer_card_item.view.*
 
-class CustomerAdapter(private val Customers:List<Customer>) : RecyclerView.Adapter<CustomerAdapter.CustomerViewHolder>() {
+class CustomerAdapter(private val Customers:List<agh.softdev.customers.database.entities.Customer>) : RecyclerView.Adapter<CustomerAdapter.CustomerViewHolder>() {
 
     class CustomerViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val txtCustomerName:TextView = itemView.txtCustomerName
@@ -24,10 +24,10 @@ class CustomerAdapter(private val Customers:List<Customer>) : RecyclerView.Adapt
     }
 
     override fun onBindViewHolder(holder: CustomerViewHolder, position: Int) {
-        val currentCustomer:Customer = Customers.get(position);
+        val currentCustomer:agh.softdev.customers.database.entities.Customer = Customers.get(position);
 
-        holder.txtCustomerName.text = currentCustomer.custName;
-        holder.txtCustomerSalary.text = currentCustomer.custSalary.toString();
+        holder.txtCustomerName.text = currentCustomer.name;
+        holder.txtCustomerSalary.text = currentCustomer.salary.toString();
     }
 
     override fun getItemCount() = Customers.size;
